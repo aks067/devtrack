@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/aks067/devtrack/cmd"
 	"os"
 )
 
@@ -10,9 +11,12 @@ func main() {
 		fmt.Println("usage: devtrack [daemon|status]")
 		return
 	}
-	if os.Args[1] == "daemon" {
-		fmt.Println("mode daemon")
-	} else if os.Args[1] == "status" {
-		fmt.Println("mode status")
+	switch os.Args[1] {
+	case "daemon":
+		daemon.RunDaemon()
+	case "status":
+		//launch status func
+	default:
+		fmt.Println("Invalid Argument")
 	}
 }
