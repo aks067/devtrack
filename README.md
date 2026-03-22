@@ -69,7 +69,7 @@ Ctrl+C  — saves the current session and exits cleanly
 
 ## Configuration
 
-In `cmd/daemon/daemon.go`, set your projects directory and GitHub username:
+In `cmd/commands.go`, set your projects directory and GitHub username:
 
 ```go
 tracker.Start("/home/yourname/projects")
@@ -89,8 +89,7 @@ githubTrack.FetchCommits("your_github_username")
 devtrack/
 ├── main.go                      # CLI entry point
 ├── cmd/
-│   ├── daemon.go         # Starts the file watcher
-│   └── status.go         # Renders the dashboard
+│   └── commands.go         # Starts the file watcher and Renders the dashboard
 ├── internal/
 │   ├── tracker/tracker.go       # inotify watcher, session logic, JSON persistence
 │   └── github/github.go         # GitHub REST API client
