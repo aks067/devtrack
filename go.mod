@@ -1,4 +1,4 @@
-module github.com/aks067/devtrack
+module devtrack
 
 go 1.26.1
 

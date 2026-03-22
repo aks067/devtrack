@@ -1,8 +1,8 @@
 package main
 
 import (
+	"devtrack/cmd"
 	"fmt"
-	"github.com/aks067/devtrack/cmd"
 	"os"
 )
 
@@ -13,9 +13,9 @@ func main() {
 	}
 	switch os.Args[1] {
 	case "daemon":
-		daemon.RunDaemon()
+		cmds.RunDaemon()
 	case "status":
-		//launch status func
+		cmds.RunStatus()
 	default:
 		fmt.Println("Invalid Argument")
 	}
